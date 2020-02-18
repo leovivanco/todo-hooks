@@ -1,0 +1,14 @@
+.Form {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.Form input {
+  width: 100%;
+  height: 46px;
+  background-color: var(--main-txt-color);
+  border: 0;
+  padding: 0.9rem;
+  color: var(--main-bg-color);
+  font-size: 1.3rem;
+}

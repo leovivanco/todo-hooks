@@ -3,7 +3,7 @@ import Title from './components/Title';
 import Form from './components/Form';
 import Task from './components/Task';
 import Footer from './components/Footer';
-
+import Button from './components/Button';
 import './App.css';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
       <Title title="Todo Now" />
       <Form onSubmit={text => setNewItem(text)} />
       <Task todos={todos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} />
-      <button onClick={() => setTodos([])}>Reset</button>
+      <Button color="danger" click={() => setTodos([])} value="Reset" />
       <Footer date={new Date().getFullYear()} />
     </div>
   );

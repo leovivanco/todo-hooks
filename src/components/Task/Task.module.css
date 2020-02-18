@@ -1,0 +1,17 @@
+.Task {
+  background-color: #f1f3f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--main-bg-color);
+  padding: 0.1rem 0.5rem;
+}
+.Task label {
+  width: 100%;
+  text-align: left;
+}
+.Task label input {
+  margin-left: 0.5rem;
+}

@@ -1,21 +1,22 @@
 import React, { Fragment } from 'react';
+import Button from '../Button/';
+import style from './Task.module.css';
 
 const Task = props => {
   const { todos, toggleComplete, deleteTodo } = props;
   return (
     <Fragment>
       {todos.map(({ text, complete, id }, index) => (
-        <div key={id}>
+        <div className={style.Task} key={id}>
           <label
-            htmlFor=""
             style={{
               textDecoration: complete ? 'line-through' : null
             }}
           >
             {text}
+            <input placeholder="Your task" type="checkbox" onChange={() => toggleComplete(index)} />
           </label>
-          <input placeholder="Your task" type="checkbox" onChange={() => toggleComplete(index)} />
-          <button onClick={() => deleteTodo(index)}>Delete</button>
+          <Button color="danger" click={() => deleteTodo(index)} value="X" />
         </div>
       ))}
     </Fragment>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import style from './Form.module.css';
 
 const useInputValue = initialValues => {
   const [text, setText] = useState(initialValues);
@@ -14,13 +15,14 @@ const Form = props => {
 
   return (
     <form
+      className={style.Form}
       onSubmit={e => {
         e.preventDefault();
         resetValue();
         onSubmit(text);
       }}
     >
-      <input value={text} onChange={onChange} />
+      <input placeholder="Type Your Todo" value={text} onChange={onChange} />
     </form>
   );
 };
